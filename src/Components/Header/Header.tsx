@@ -16,7 +16,6 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function để tránh rò rỉ bộ nhớ
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
@@ -88,7 +87,7 @@ function Header() {
         <nav
           className={cn(
             `
-            font-light text-main-text md:hidden flex flex-col w-full absolute left-0 bg-[#e1e1e1] shadow-xl transition-all duration-500 ease-in-out z-[-1] top-header-height opacity-0 invisible -translate-y-5`,
+            font-light text-main-text md:hidden flex flex-col w-full absolute left-0 bg-[#ffc075] shadow-xl transition-all duration-500 ease-in-out z-[-1] top-header-height opacity-0 invisible -translate-y-5`,
             {
               "top-header-height opacity-100 visible translate-y-0":
                 isNavMobileOpen,

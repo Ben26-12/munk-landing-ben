@@ -54,7 +54,7 @@ export default function ReviewCarousel() {
       id="testimonials"
       className="overflow-hidden w-full py-10 my-10 bg-gray-50"
     >
-      <h1 className="text-main-title text-center font-thin text-main-text font-title my-10">
+      <h1 className="text-4xl md:text-main-title  text-center font-thin text-main-text font-title my-10">
         WHAT OUR CUSTOMERS SAY
       </h1>
       <div
