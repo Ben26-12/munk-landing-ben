@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-primary: "Montserrat", sans-serif;
+  --font-title: "Poiret One", sans-serif;
+  --text-main-title: 64px;
+  --text-sub-title: 28px;
+
+  --spacing-inner-width: 1250px;
+  --spacing-header-height: 84px;
+  --color-forest: rgb(20, 127, 111);
+  --color-main-text: #1a1a1a;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+  }
+
+  *::-webkit-scrollbar {
+    @apply w-[6px];
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e1e1e1;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e1e1e1 transparent;
+  }
+}
