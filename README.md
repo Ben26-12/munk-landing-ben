@@ -1,75 +1,103 @@
-# React + TypeScript + Vite
+# Munk Tea — A Premium Matcha Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, responsive landing page for Munk Tea, built with the latest React 19 and Tailwind CSS v4 to deliver a modern, zen-like aesthetic.
 
-Currently, two official plugins are available:
+[**Live Demo**](https://ben26-12.github.io/munk-landing-ben/) | [**GitHub Repository**](https://github.com/Ben26-12/munk-landing-ben)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Visual Showcase
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Desktop Experience
+![Munk Tea Hero](./public/screenshots/hero-desktop.png)
 
-Note: This will impact Vite dev & build performances.
+*Sequential sections showing the seamless transition:*
+![Munk Tea Sections](./public/screenshots/sections-desktop.png)
 
-## Expanding the ESLint configuration
+*Testimonials & Infinite Carousel:*
+![Munk Tea Reviews](./public/screenshots/reviews-desktop.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*Responsive Contact Form:*
+![Munk Tea Contact](./public/screenshots/contact-desktop.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Mobile Experience
+<div align="center">
+  <img src="./public/screenshots/hero-mobile.png" width="32%" alt="Hero Mobile" />
+  <img src="./public/screenshots/product-mobile.png" width="32%" alt="Product Mobile" />
+  <img src="./public/screenshots/reviews-mobile.png" width="32%" alt="Reviews Mobile" />
+</div>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tech Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Core** | React 19, TypeScript, Vite |
+| **Styling** | Tailwind CSS v4, CSS Variables |
+| **Tools** | ESLint, PostCSS, Gh-Pages |
+
+---
+
+## Key Technical Features
+
+### Seamless Infinite Carousel
+Engineered a smooth, endless slider for testimonials by leveraging **Array Cloning** and CSS transitions. By dynamically resetting the index after the transition completes, it achieves a "jank-free" looping effect that feels natural and premium.
+
+### Modern Styling & Layout
+Utilized **Tailwind CSS v4** to define a unified Design System:
+- **Custom Tokens**: Centralized variables for colors (like `--color-forest`) and animations directly in the CSS entry point.
+- **Responsive Architecture**: A hybrid Flexbox/Grid system ensures the visual hierarchy remains consistent from mobile to desktop, with adaptive typography and spacing.
+
+---
+
+## Core Features
+
+- **Smooth Scrolling**: Native browser implementation for seamless navigation.
+- **Dynamic Product Display**: Optimized rendering of product details and pricing.
+- **Mobile-First Design**: Fully responsive header and layout for all devices.
+- **Interactive Sliders**: High-performance scrolling for customer reviews.
+
+---
+
+## Project Structure
+
+```text
+/src
+├── Components
+│   ├── Header           # Navigation bar with mobile menu
+│   ├── MainBanner       # Hero section with large typography
+│   ├── ProductSection   # Dynamic product showcase (Grid)
+│   ├── ReviewCarousel   # Infinite-loop testimonial slider
+│   ├── ...              # Other modular components (History, Contact)
+│   └── constants.ts     # Centralized content and image links
+├── App.tsx              # Application entry and layout orchestration
+├── main.tsx             # React 19 root mounting
+└── style.css            # Tailwind v4 theme and global styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ben26-12/munk-landing-ben.git
+   cd munk-landing
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+*Developed with passion for high-end web experiences.*
